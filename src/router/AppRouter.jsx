@@ -1,35 +1,36 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Dashboard from "../pages/Dashboard";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import Dashboard from "../pages/Dashboard";
-import UpdateBlog from "../pages/UpdateBlog";
-import Detail from "../pages/Detail";
-
-import NewBlog from "../pages/NewBlog";
-import Profile from "../pages/Profile";
 import PrivateRouter from "./PrivateRouter";
+import Detail from "../pages/Detail";
+import UpdatePost from "../pages/UpdatePost";
+import NewPost from "../pages/NewPost";
+import Profile from "../pages/Profile";
+import Navbar from "../components/Navbar";
+
+
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<PrivateRouter />}>
-          {/* <Route path="" element={<Profile />} /> */}
+          <Route path="" element={<Profile />} />
         </Route>
-        <Route path="/new-blog" element={<PrivateRouter />}>
-          {/* <Route path="" element={<NewBlog />} /> */}
+        <Route path="/new-post" element={<PrivateRouter />}>
+          <Route path="" element={<NewPost />} />
         </Route>
-        <Route path="/update-blog/:id" element={<PrivateRouter />}>
-          {/* <Route path="" element={<UpdateBlog />} /> */}
+        <Route path="/update-post/:id" element={<PrivateRouter />}>
+          <Route path="" element={<UpdatePost />} />
         </Route>
         <Route path="/detail/:id" element={<PrivateRouter />}>
-          {/* <Route path="" element={<Detail />} /> */}
+          <Route path="" element={<Detail />} />
         </Route>
       </Routes>
     </BrowserRouter>
