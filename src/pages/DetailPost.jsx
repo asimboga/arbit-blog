@@ -118,7 +118,8 @@ const DetailPost = () => {
                 </svg>
                 Delete
               </button>
-              <button
+              <NavLink
+              to="`/edit-post/${postId}`"
                 className="flex justify-end mr-4 bg-blue-500 text-white py-2 px-4 rounded"
                 onClick={() => handleEditPost(post.id)}
               >
@@ -137,7 +138,7 @@ const DetailPost = () => {
                   />
                 </svg>
                 Update
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>
