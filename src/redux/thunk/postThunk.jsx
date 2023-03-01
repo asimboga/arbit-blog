@@ -9,8 +9,9 @@ export const getPost = () => {
     try {
       dispatch(setLoading());
       const { data } = await axios.get(url);
-      dispatch(setPostList(data));
-      console.log(data);
+      const filteredData = data.filter(post => post.userId === 1);
+      dispatch(setPostList(filteredData));
+      console.log(filteredData);
     } catch (error) {
       console.log(error);
     } finally {

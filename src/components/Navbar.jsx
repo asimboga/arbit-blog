@@ -1,13 +1,15 @@
 import React from 'react'
+import logo  from "../assets/logo.png";
+import  user from "../assets/user.png";
 
 
 const Navbar = () => {
     return (
-        <nav className="bg-white">
-            <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <nav className="bg-white mt-10 mx-12">
+            <div className="max-w-7xl sm:px-6 lg:px-8">
                 <div className="relative flex items-center justify-between h-16">
                     <div className="flex-shrink-0 flex items-center">
-                        <img className="block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" />
+                        <img className="block h-8 w-auto" src={logo} alt="Workflow" />
                         <span className="ml-2 text-black font-semibold text-lg">Arbit Blog</span>
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2">
@@ -22,10 +24,8 @@ const Navbar = () => {
                             <div>
 
                                 <button className="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out" id="user-menu" aria-label="User menu" aria-haspopup="true">
-                                    <img className="h-8 w-8 rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg" alt="User" />
+                                    <img className="h-8 w-8 rounded-full" src={user} alt="User" />
                                 </button>
-                            </div>
-                            <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg">
                             </div>
                         </div>
                     </div>
